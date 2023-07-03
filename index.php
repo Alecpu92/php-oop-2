@@ -1,63 +1,17 @@
-
 <?php
 
-class Stock {
+require_once("./models/Stock.php");
 
-    private $name;
-    private $cost;
-    private $quantity;
-    private $score;
+class Dog {
 
-    public function __construct( $name, $cost, $quantity, $score, ) {
+    private $type;
+    private $size;
 
-        $this -> name = $name;
-        $this -> cost = $cost;
-        $this -> quantity = $quantity;
-        $this -> score = $score;
+    public function __construct($type, $size) {
 
+        $this -> setType($type);
+        $this -> setSize($size);
     }
-
-}
-
-public function getName() {
-
-    return $this -> name;
-
-}
-public function setName($name) {
-
-    $this -> name = $name;
-
-}
-public function getCost() {
-
-    return $this -> cost;
-
-}
-public function setCost($cost) {
-
-    $this -> cost = $cost;
-    
-}
-public function getQuantity() {
-
-    return $this -> quantity;
-
-}
-public function setQuantity($quantity) {
-
-    $this -> quantity = $quantity;
-    
-}
-public function getScore() {
-
-    return $this -> score;
-
-}
-public function setScore($score) {
-
-    $this -> score = $score;
-    
 }
 
 $stock1 = new Stock("Frontline" , "30$" , "40" , "8");
