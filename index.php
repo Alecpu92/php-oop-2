@@ -1,3 +1,4 @@
+
 <?php
 
 class Stock {
@@ -23,9 +24,9 @@ public function getName() {
     return $this -> name;
 
 }
-public function setName( $name ) {
+public function setName($name) {
 
-    $this -> name;
+    $this -> name = $name;
 
 }
 public function getCost() {
@@ -33,9 +34,9 @@ public function getCost() {
     return $this -> cost;
 
 }
-public function setCost( $cost ) {
+public function setCost($cost) {
 
-    $this -> cost;
+    $this -> cost = $cost;
     
 }
 public function getQuantity() {
@@ -43,9 +44,9 @@ public function getQuantity() {
     return $this -> quantity;
 
 }
-public function setQuantity( $quantity ) {
+public function setQuantity($quantity) {
 
-    $this -> quatity;
+    $this -> quantity = $quantity;
     
 }
 public function getScore() {
@@ -53,8 +54,17 @@ public function getScore() {
     return $this -> score;
 
 }
-public function setScore( $score ) {
+public function setScore($score) {
 
-    $this -> score;
+    $this -> score = $score;
     
 }
+
+$stock1 = new Stock("Frontline" , "30$" , "40" , "8");
+var_dump($stock1);
+   
+
+
+
+
+
