@@ -39,5 +39,6 @@ class Food extends Product {
 
         $this -> expireDate = $expireDate;
     }
+    
 }
 

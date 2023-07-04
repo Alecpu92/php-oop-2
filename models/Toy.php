@@ -1,11 +1,17 @@
 <?php
 
+
+
 class Toy extends Product {
+
+    use Brand;
 
     private $color;
     private $age;
 
-    public function __construct($name, $weight, $price, Category $category, $color, $age) {
+    public function __construct($name, $weight, $price,
+                               Category $category, $color, $age,
+                               ) {
         
         parent :: __construct($name, $weight, $price, $category);
 

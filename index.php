@@ -26,6 +26,8 @@
                     <div>Peso: <?php echo $food -> getWeight() ?>Kg</div>
                     <div>Prezzo: <?php echo $food -> getPrice() ?>E</div>
                     <div>Data scadenza: <?php echo $food -> getExpireDate() ?></div>
+                    <div>Marca: <?php echo $food -> getBrand() ?></div>
+                </div>
                 </div>
             
             <?php
@@ -50,6 +52,7 @@
                     <div>Prezzo: <?php echo $toy -> getPrice() ?>E</div>
                     <div>Colore: <?php echo $toy -> getColor() ?></div>
                     <div>Eta' consigliata: <?php echo $toy -> getAge() ?></div>
+                    <div>Marca: <?php echo $toy -> getBrand() ?></div>
                 </div>
             
             <?php
