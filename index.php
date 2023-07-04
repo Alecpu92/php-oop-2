@@ -1,54 +1,61 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
 
-require_once("./models/Stock.php");
-require_once("./models/Dog.php");
+    <?php require_once("./data/db.php"); ?>
 
-class Cat {
-
-    private $type;
-    private Stock $stock;
-
-    public function __construct($type, Stock $stock) {
-
-        $this -> setType($type);
-        $this -> setStock($stock);
-
-    }
-
-    public function getType() {
-
-        return $this -> type;
-
-    }
-
-    public function setType() {
-        $this -> type = $type;
-
-    }
-
-    public function getStock() {
-
-        return $this -> stock;
-
-    }
-
-    public function setStock() {
-
-        $this -> stock = $stock;
-    }
-}
+</head>
+<body>
     
+    <h2>Food</h2>
 
-$stock1 = new Stock("Frontline" , "30$" , "40" , "8");
-var_dump($stock1);
+    <?php
 
-echo "<br>--------------------------<br>";
+        foreach ($foods as $food) {
+            
+            ?> 
+            
+                <div>
+                    <h3>
+                        [<?php echo $food -> getCategory() -> getName(); ?>]
+                        <?php echo $food -> getName(); ?>
+                    </h3>
+                    <div>Peso: <?php echo $food -> getWeight() ?>Kg</div>
+                    <div>Prezzo: <?php echo $food -> getPrice() ?>E</div>
+                    <div>Data scadenza: <?php echo $food -> getExpireDate() ?></div>
+                </div>
+            
+            <?php
+        }
 
-$dog1 = new Dog("giocattolo" , "media");
-var_dump($dog1);
-   
+    ?>
 
+    <h2> Toys </h2>
 
+    <?php
 
+        foreach ($toys as $toy) {
+            
+            ?> 
+            
+                <div>
+                    <h3>
+                        [<?php echo $toy -> getCategory() -> getName(); ?>]
+                        <?php echo $toy -> getName(); ?>
+                    </h3>
+                    <div>Peso: <?php echo $toy -> getWeight() ?>Kg</div>
+                    <div>Prezzo: <?php echo $toy -> getPrice() ?>E</div>
+                    <div>Colore: <?php echo $toy -> getColor() ?></div>
+                    <div>Eta' consigliata: <?php echo $toy -> getAge() ?></div>
+                </div>
+            
+            <?php
+        }
 
+    ?>
 
+</body>
+</html>

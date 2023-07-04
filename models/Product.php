@@ -1,62 +1,53 @@
 <?php
 
-class Stock {
+class Product {
 
     private $name;
-    private $cost;
-    private $quantity;
-    private $score;
+    private $weight;
+    private $price;
 
-    public function __construct( $name, $cost, $quantity, $score ) {
+    private Category $category;
+
+    public function __construct($name, $weight, $price, Category $category) {
 
         $this -> setName($name);
-        $this -> setCost($cost);
-        $this -> setQuantity($quantity);
-        $this -> setScore(score);
-
+        $this -> setWeight($weight);
+        $this -> setPrice($price);     
+        
+        $this -> setCategory($category);
     }
 
+    public function getName() {
 
+        return $this -> name;
+    }
+    public function setName($name) {
 
-public function getName() {
+        $this -> name = $name;
+    }
+    public function getWeight() {
 
-    return $this -> name;
+        return $this -> weight;
+    }
+    public function setWeight($weight) {
 
-}
-public function setName($name) {
+        $this -> weight = $weight;
+    }
+    public function getPrice() {
 
-    $this -> name = $name;
+        return $this -> price;
+    }
+    public function setPrice($price) {
 
-}
-public function getCost() {
+        $this -> price = $price;
+    }
 
-    return $this -> cost;
+    public function getCategory() {
 
-}
-public function setCost($cost) {
+        return $this -> category;
+    }
+    public function setCategory($category) {
 
-    $this -> cost = $cost;
-    
-}
-public function getQuantity() {
-
-    return $this -> quantity;
-
-}
-public function setQuantity($quantity) {
-
-    $this -> quantity = $quantity;
-    
-}
-public function getScore() {
-
-    return $this -> score;
-
-}
-public function setScore($score) {
-
-    $this -> score = $score;
-    
-}
-
+        $this -> category = $category;
+    }
 }
