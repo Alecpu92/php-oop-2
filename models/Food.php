@@ -1,9 +1,30 @@
 <?php
+
+trait Brand {
+
+    private $brand;
+
+    public function getBrand() {
+
+        return $this -> brand;
+    }
+    public function setBrand($brand) {
+
+        $this -> brand = $brand;
+    }
+}
+
+
+
 class Food extends Product {
+
+    use Brand;
 
     private $expireDate;
 
-    public function __construct($name, $weight, $price, Category $category, $expireDate) {
+    public function __construct($name, $weight, $price,
+                                 Category $category, $expireDate,
+                                 $brand) {
 
         parent :: __construct($name, $weight, $price, $category);
 
@@ -19,3 +40,4 @@ class Food extends Product {
         $this -> expireDate = $expireDate;
     }
 }
+
