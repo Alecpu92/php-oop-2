@@ -1,6 +1,11 @@
 <?php
 
+
+
+
 class Product {
+
+    
 
     private $name;
     private $weight;
